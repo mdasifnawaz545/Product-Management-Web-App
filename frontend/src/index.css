@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+.mybg{
+    background-image: url("https://res.cloudinary.com/dpqdgcipi/image/upload/v1744181251/magicstudio-art_2_b68e0p.jpg"); 
+
+    background-size: 100%;
+
+
+}
