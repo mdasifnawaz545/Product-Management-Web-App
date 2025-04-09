@@ -20,10 +20,10 @@ const route = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
       <Route path="/" element={<Home />}></Route>
-      <Route path="signup" element={<Signup />}></Route>
-      <Route path="login" element={<Login />}></Route>
-      <Route path="add" element={<AddProduct />}></Route>
-      <Route path="edit/:name" element={<EditProduct />}></Route>
+      <Route path="https://product-management-web-app-1.onrender.com/signup" element={<Signup />}></Route>
+      <Route path="https://product-management-web-app-1.onrender.com/login" element={<Login />}></Route>
+      <Route path="https://product-management-web-app-1.onrender.com/add" element={<AddProduct />}></Route>
+      <Route path="/edit/:name" element={<EditProduct />}></Route>
     </Route>
   )
 );
