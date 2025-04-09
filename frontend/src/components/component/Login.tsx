@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import Button from './Button'
+import  { useState } from 'react'
 import axios from 'axios';
 
 const Login = () => {
@@ -9,6 +8,7 @@ const Login = () => {
             email: user.email,
             password: user.password
         })
+        console.log(userRegister)
     }
     return (
         <div className='w-full min-h-screen flex items-center justify-center'>

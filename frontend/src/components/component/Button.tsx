@@ -1,4 +1,3 @@
-import React from 'react'
 
 const Button = ({ buttonName="", ownClass="" }: { buttonName: string, ownClass: string }) => {
     return (

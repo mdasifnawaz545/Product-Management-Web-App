@@ -1,4 +1,4 @@
-import React from 'react'
+
 
 const Card = ({ name, desc, categ, rating, price,url }: { name: string, desc: string, categ: string, rating: string, price: number,url:string }) => {
     return (
