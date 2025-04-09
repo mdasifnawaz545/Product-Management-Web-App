@@ -8,11 +8,11 @@ const EditProduct = () => {
   const [user, setUser] = useState("");
   const [product, setProduct] = useState({ name: "", description: "", category: "", price: "", rating: "", imgURL: "", user: user });
   const getUserData = async () => {
-    let userData: any = await axios.get("http://localhost:3000/user/verify");
+    let userData: any = await axios.get("https://product-management-web-app-r7id.onrender.com/user/verify");
     setUser(userData.email as string);
   }
   const handleSubmit = async () => {
-    const productData = await axios.post("http://localhost:3000/create", {
+    const productData = await axios.post("https://product-management-web-app-r7id.onrender.com/create", {
       product
     });
     console.log(productData)

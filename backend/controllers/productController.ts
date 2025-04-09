@@ -69,15 +69,15 @@ const update = async (req: any, res: any) => {
 
 }
 const remove = async (req: any, res: any) => {
-    let token = jwt.verify(req.cookie.token, process.env.SECRET as string);
-    if (!token) {
-        return res.json({
-            message: "Unauthorized",
-            status: 201
-        })
-    }
-    let { id } = req.body;
-    let data = await productModel.findByIdAndDelete(id);
+    // let token = jwt.verify(req.cookie.token, process.env.SECRET as string);
+    // if (!token) {
+    //     return res.json({
+    //         message: "Unauthorized",
+    //         status: 201
+    //     })
+    // }
+    let { name } = req.body;
+    let data = await productModel.findOneAndDelete({name});
     if (!data) {
         return res.json({
             message: "Some Error has been Occured",

@@ -10,7 +10,7 @@ router.get("/view", view);
 
 router.post("/update", update);
 
-router.delete('/delete', remove);
+router.post('/remove', remove);
 
 router.get('/search', search);
 

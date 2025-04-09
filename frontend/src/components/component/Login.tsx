@@ -4,7 +4,7 @@ import axios from 'axios';
 const Login = () => {
     const [user, setUser] = useState({ email: "", password: "" });
     const handleSubmit = async () => {
-        const userRegister = await axios.post("/user/login", {
+        const userRegister = await axios.post("https://product-management-web-app-r7id.onrender.com/user/login", {
             email: user.email,
             password: user.password
         })
@@ -17,19 +17,21 @@ const Login = () => {
                     <div className='text-center flex items-center justify-center mb-4'>
                         <img src="https://res.cloudinary.com/dpqdgcipi/image/upload/v1744180274/zynetic_gmgrcm.png" alt="Zynetic" width={225} />
                     </div>
-                    <input type="text" className='outline-none mb-4 border-2 border-gray-600 rounded-lg text-white pl-2 w-64 h-10' placeholder='Email' value={user.password} onChange={(e) => {
+                    <input type="text" className='outline-none mb-4 border-2 border-gray-600 rounded-lg text-white pl-2 w-64 h-10' placeholder='Email' value={user.email} onChange={(e) => {
                         setUser((prev: any) => (
-                            { ...prev, password: e.target.value as string }
+                            { ...prev, email: e.target.value }
                         ))
                     }} />
                     <input type="password" className='outline-none mb-4 border-2 border-gray-600 rounded-lg text-white pl-2 w-64 h-10' placeholder='Password' value={user.password} onChange={(e) => {
                         setUser((prev: any) => (
-                            { ...prev, password: e.target.value as string }
+                            { ...prev, password: e.target.value }
                         ))
                     }} />
-                    <div className='min-w-full flex mt-2 justify-center items-center text-center'><button className={`p-1 px-4 rounded-md flex items-center justify-center hover:drop-shadow-lg hover:opacity-90 bg-green-600 text-md text-[#fff]`} type='submit'>Sign Up</button></div>
-                    <div className='text-white text-bold '>
+                    <div className='min-w-full flex mt-2 justify-center items-center text-center'><button className={`p-1 px-4 rounded-md flex items-center justify-center hover:drop-shadow-lg hover:opacity-90 bg-green-600 text-md text-[#fff]`} type='submit'>Log In</button></div>
+                    <div className='text-white text-bold mt-4'>
                         <h1>New to Zynetic ? <span className='text-green-500'><a href="/signup">Sign Up</a></span></h1>
+                        <hr />
+                        <h1 className='p-1'>JWT token is saved you can check the cookie as well and there is a specific route for logout just change the route to /user/logout</h1>
                     </div>
                 </form>
             </div>

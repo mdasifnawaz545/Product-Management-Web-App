@@ -4,7 +4,7 @@ import axios from 'axios';
 const Signup = () => {
     const [user, setUser] = useState({ email: "", password: "" });
     const handleSubmit = async () => {
-        const userRegister = await axios.post("http://localhost:3000/user/register", {
+        const userRegister = await axios.post("https://product-management-web-app-r7id.onrender.com/user/register", {
             email: user.email,
             password: user.password
         });
@@ -32,6 +32,8 @@ const Signup = () => {
                     <div className='min-w-full flex mt-2 justify-center items-center text-center'><button className={`p-1 px-4 rounded-md flex items-center justify-center hover:drop-shadow-lg hover:opacity-90 bg-green-600 text-md text-[#fff]`} type='submit'>Sign Up</button></div>
                     <div className='text-white mt-4 text-bold '>
                         <h1>Already have an account ? <span className='text-green-500'><a href="/login">Login</a></span></h1>
+                        <hr />
+                        <h1 className='p-1'>JWT token is saved you can check the cookie as well and there is a specific route for logout just change the route to /user/logout</h1>
                     </div>
 
                 </form>
