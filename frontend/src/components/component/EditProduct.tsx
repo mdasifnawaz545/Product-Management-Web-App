@@ -4,6 +4,7 @@ import { useParams } from 'react-router';
 
 const EditProduct = () => {
   const {name}=useParams();
+  console.log(name)
   const [user, setUser] = useState("");
   const [product, setProduct] = useState({ name: "", description: "", category: "", price: "", rating: "", imgURL: "", user: user });
   const getUserData = async () => {
