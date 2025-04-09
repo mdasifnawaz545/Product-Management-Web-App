@@ -5,11 +5,9 @@ import productRoute from './routes/productRoutes'
 import userRoute from './routes/userRoutes'
 import DBConnect from './lib/database';
 import cors from 'cors';
-import path from "path";
+
 
 const app = express();
-
-app.use(express.static(path.join(__dirname, "../frontend/dist")));
 
 app.use(cors());
 
@@ -26,10 +24,6 @@ DBConnect()
 app.use("/", productRoute);
 
 app.use("/user", userRoute);
-
-app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "../frontend/dist", "index.html"));
-  });
 
 app.listen(process.env.PORT, () => {
     console.log(`Listen at ${process.env.PORT}`);
