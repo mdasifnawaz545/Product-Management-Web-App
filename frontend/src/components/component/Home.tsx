@@ -6,7 +6,7 @@ const Home = () => {
     const [product, setProduct] = useState<any[]>([{ name: "", desc: "", categ: "", rating: "", price: "", imgURL: "" }]);
     const [use, setUse] = useState("");
     const fetchAllProducts = async () => {
-        let response = await axios.get("http://localhost:3000/view");
+        let response = await axios.get("https://product-management-web-app-r7id.onrender.com/view");
         if (Array.isArray(response.data)) {
             setProduct(response.data as any[]);
         }

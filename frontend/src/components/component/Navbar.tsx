@@ -10,7 +10,7 @@ const Navbar = () => {
                     </a>
                 </div>
                 <div>
-                    <a href="/signup">
+                    <a href="https://product-management-web-app-1.onrender.com/signup">
                         <Button buttonName='SIGN UP' ownClass={`p-1 px-4 text-md rounded-md flex items-center justify-center hover:drop-shadow-lg hover:opacity-90 bg-green-600 text-md text-[#fff]`}>
                         </Button>
                     </a>
